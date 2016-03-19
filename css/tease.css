@@ -1,0 +1,22 @@
+.tease {
+    display: block;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+    background-color: #0275D8;
+}
+
+.tease:hover{
+	display: block;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #7fffD4;
+    text-align: center;
+    background-color: #6f8392;
+}
+
+body {
+    background-image: url("images/class.jpg");
+    background-repeat: repeat-x;
+}

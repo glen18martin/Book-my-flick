@@ -1,0 +1,141 @@
+/* navbar style */
+
+.navbar-inverse { background-color: #000000}
+.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { background-color: #00FFC3}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { background-color: #19FFE8}
+.dropdown-menu { background-color: #000000}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #428BCA}
+.navbar-inverse { background-image: none; }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
+.navbar-inverse { border-color: #000000}
+.navbar-inverse .navbar-brand { color: #FFFFFF}
+.navbar-inverse .navbar-brand:hover { color: #69EBFF}
+.navbar-inverse .navbar-nav>li>a { color: #FFFFFF}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { color: #000000}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { color: #000000}
+.navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { color: #ffffff}
+.dropdown-menu>li>a { color: #FFFFFF}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #00FFEE}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-top-color: #000000}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #000000}
+
+
+
+
+/* navbar height */
+.navbar{
+	min-height: 50px;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 20px 15px 0px 15px;
+    font-size: 28px;
+    line-height: 21px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.navbar-form{
+	padding-top: 24px;
+}
+
+body {
+   	
+     background-image: url("../img/stars.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+
+     background-attachment: fixed;
+} 
+
+.gly{
+
+	font-size: 30px;
+	background-color: white;
+	padding: 15px;
+	border-radius: 60%;
+}
+
+.gly:hover{
+
+	animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+	font-size: 40px;
+	background-color: black;
+	padding: 20px;
+	border-radius: 60%;
+	color: white;
+	
+
+}
+
+@keyframes example {
+      from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.carousel-inner > .item {
+      
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.42857;
+    vertical-align: top;
+    border-top: 2px solid rgba(0, 0, 0, 1);
+}
+
+
+
+.panel-default>.panel-heading {
+    color: #ffffff;
+    background-color: #555;
+    border-color: #337ab7;
+}
+
+.panel-body {
+    background-color: #333;
+    padding: 15px;
+}
+
+.panel-default>.panel-heading {
+    font-weight: 800;
+    color: #13154C;
+    background-color: #FBB002;
+    border-color: #941816;
+}
+
+video {
+    display: inline-block;
+    vertical-align: baseline;
+    width: 600px;
+}
+.panel-group .panel-heading {
+    border-bottom: 0;
+}
+
+video {
+    display: inline-block;
+    vertical-align: baseline;
+    width: 509px;
+}
+
