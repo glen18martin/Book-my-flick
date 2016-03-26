@@ -55,6 +55,11 @@
 
   <div class="container">
 
+
+ 
+
+
+
         <!-- Top content -->
         <div class="top-content">
           
@@ -77,17 +82,19 @@
                               </div>
                               </div>
                               <div class="form-bottom">
-                            <form id="login" role="form" action="login.php" method="post" class="login-form">
+                            <form id="login" role="form" action="signinup.php" method="post" class="login-form">
                               <div class="form-group">
-                                <label class="sr-only" for="form-username">Email Id</label>
+                                 <input type="hidden" name="form" value="1"></input>
+                                 <label class="sr-only" for="form-username">Email Id</label>
                                   <input type="text" name="checkid" placeholder="Email Id..." class="form-username form-control" id="form-username" required>
-                                </div>
-                                <div class="form-group">
-                                  <label class="sr-only" for="form-password">Password</label>
-                                  <input type="password" name="checkpass" placeholder="Password..." class="form-password form-control" id="form-password" required>
-                                </div>
-                                <button type="submit" class="btn">Sign in!</button>
-                            </form>
+                                  </div>
+                                   <div class="form-group">
+                                      <label class="sr-only" for="form-password">Password</label>
+                                      <input type="password" name="checkpass" placeholder="Password..." class="form-password form-control" id="form-password" required>
+                                   </div>
+                                    <button type="submit" class="btn">Sign in!</button>
+                                   </form>
+
                           </div>
                         </div>
                     
@@ -111,7 +118,8 @@
                               </div>
                               </div>
                               <div class="form-bottom">
-                            <form id="signup" role="form" action="signup.php" method="post" class="registration-form">
+                            <form id="signup" role="form" action="signinup.php" method="post" class="registration-form">
+                            <input type="hidden" name="form" value="0"></input>
                               <div class="form-group">
                                 <label class="sr-only" for="form-first-name">Name</label>
                                   <input type="text" name="name" placeholder="Name..." class="form-first-name form-control" id="form-first-name" required>
@@ -131,69 +139,41 @@
                                   <label class="sr-only" for="form-email">Password</label>
                                   <input type="password" name="pass" placeholder="Password..." class="form-pass form-control" id="form-pass" required>
                                 </div>
+
+                                 <div class="form-group">
+                                  <label class="sr-only" for="form-email">Confirm Password</label>
+                                  <input type="password" name="passcheck" placeholder="Reconfirm Password..." class="form-pass form-control" id="form-pass" required>
+                                </div>
                                 
                                 <button type="submit" class="btn">Sign me up!</button>
                             </form>
                           </div>
                           </div>
+
                           
                         </div>
 
-<!--<div class="col-sm-5">
-                          
-                          <div class="form-box">
-                            <div class="form-top">
-                              <div class="form-top-left">
-                                <h3>Join as guest</h3>
-                                  
-                              </div>
-                              <div class="form-top-right">
-                                <i class="fa fa-pencil"></i>
-                              </div>
-                              </div>
-                              <div class="form-bottom">
-                          </div>
-                          </div>
-                          
-                        </div>end-->
-
-
-
-                    </div>
+                  </div>
                     
                 </div>
             </div>
             
         </div>
     
-      <!--<div class="col-md-4"></div>
-      <div class="col-md-4">
-          <div class="panel panel-default">
-       <div class="panel-heading">Login</div>
-        <div class="panel-body">
-          <form id="login" action="login.php" method="post">
-                <input type="text" style="border-color: #1d4e89;" name="name" placeholder="Name" required><br>
-                <br><input type="password" style="border-color: #1d4e89;" name="pass" placeholder="Password"><br><br>
-                <input type="submit" class="btn btn-default" value="Submit"  style="margin: 0px 0px 0px 250px;background-color: #e8e8e8;border-color: #9dc6d8;">Login</input>
-                <hr><a href="#" style="text-align: center;">Enter as guest</a>
-               
-                </form>
-        </div>
-      </div>
-
-      </div>
-       <div class="col-md-4"></div>-->
-
-
-
+      
   </div><!--container end-->
 
+<div class="container" align="center">
+<img src="img/reel.gif">
+</div>
 
-
+<!--div class="container-fluid">
+<img src="img/pop.png" height="0.5%" width="100%">
+</div-->
 
       <!--Final Footer-->
 
-      <br><br>
+     <br><br>
     
       <div class="container-fluid" style="background-color: black;color: white;font-size: 14px">
           <div class="container">
@@ -216,7 +196,7 @@
 
          <div class="col-md-3" style="font-family:'Cantarell',cursive;"><h4 style="font-size: 19px;color:#968afc; font-family: 'Courgette',cursive;">Contact Us</h4><a data-toggle="modal" data-target="#message" style="color: #ffffff;text-decoration: underline;">Leave us a message</a></div>
 
-         <div class="col-md-2" style="font-family:'Cantarell',cursive;"><h4 style="color: #f9fe44;font-size: 19px; font-family: 'Courgette',cursive;">Credits</h4>Didimos<br>Dbit<br>ACM<br>Boostrap<br>W3schools</div>
+         <div class="col-md-2" style="font-family:'Cantarell',cursive;"><h4 style="color: #f9fe44;font-size: 19px; font-family: 'Courgette',cursive;">Project Team</h4>Nathaneal (21)<br>Glen (32)<br>Linson (36)<br>Preetham (37)<br>Amey (39)<br>Swapnil (40)</div>
 
          <div class="col-md-1"><img src="img/bird.png" height="150px"></div>
           
@@ -231,6 +211,42 @@
 
 
 
+
+        
+        <!--Modal-->
+
+         <div id="message" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: #1d4e89;border-color: #1d4e89">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title" style="color: #ffffff">We would love to hear from you !</h4>
+                </div>
+                <div class="modal-body" style="background-color: #e8e8e8">
+                 
+                <form id="feedback">
+                <input type="text" style="border-color: #1d4e89;" placeholder="Name" required><br>
+                <br><input type="text" style="border-color: #1d4e89;" placeholder="Email Id"><br><br>
+                <textarea rows="5" placeholder="Comments" class="form-control" style="resize:none;padding: 2px;border-color:#1d4e89;border-width:2px;"></textarea><br>
+               
+                </form>
+
+
+                </div>
+                <div class="modal-footer" style="background-color: #1d4e89;border-color:#1d4e89">
+                  <button type="submit" class="btn btn-default" value="Submit" form="feedback" style="background-color: #e8e8e8;border-color: #9dc6d8">Submit</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: #e8e8e8;border-color: #9dc6d8">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        <!--Modal end-->
+
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -240,6 +256,9 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.backstretch.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+
+
+
       
   </body>
 </html>

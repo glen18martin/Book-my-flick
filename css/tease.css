@@ -17,6 +17,11 @@
 }
 
 body {
-    background-image: url("images/class.jpg");
-    background-repeat: repeat-x;
-}
+    
+     background-image: url("../img/hcr.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+
+     background-attachment: fixed;
+} 
+

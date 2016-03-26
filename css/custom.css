@@ -50,7 +50,7 @@
 
 body {
    	
-     background-image: url("../img/stars.jpg");
+     background-image: url("../img/wall.jpg");
      background-repeat: no-repeat;
      background-size: cover;
 
@@ -138,4 +138,5 @@ video {
     vertical-align: baseline;
     width: 509px;
 }
+
 
