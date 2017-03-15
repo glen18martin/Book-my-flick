@@ -1,11 +1,25 @@
+<?php
+
+require 'config.php';
+
+session_start();
+
+$name = $_SESSION["login"];
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Book my Flick!</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +29,7 @@
      <link rel="stylesheet" href="assets/css/style.css">
      <link rel="stylesheet" type="text/css" href="css/custom.css">
 
-   <link rel="icon" type="image/x-icon" href="img/gstyle.png">
+ <link rel="icon" href="img/logo.ico">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,7 +41,7 @@
 
 
   <!--Navbar-->
-    <nav class="navbar navbar-inverse">
+ <nav class="navbar navbar-inverse">
         <div class="container-fluid" style="font-size:16px">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -37,20 +51,41 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html" style="padding:7px 10px 0px 20px "><img src="img/Gmain.png" width="50px" /></a>
-          <a class="navbar-brand" href="index.html">G1en18</a>
+          <a class="navbar-brand" href="index.html" style="padding:7px 10px 0px 20px "><img src="img/bmflogo.png" width="70px" /></a>
+          <a class="navbar-brand" href="index.html">Book my Flick!</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-          <li class="#"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-          </ul>
-                    
+          
+            <ul class="nav navbar-nav navbar-right">
+              <li class="#"><a href="main.html">Home <span class="sr-only">(current)</span></a></li>
+  
+                    <li>
+                        <a href="main.html#about">About</a>
+                    </li>
+                   
+                    <li><a href="theatre_browse.html">Theatres</a></li>
+                    <li><a href="movies_browse.html">Movies</a></li>
+                    <li><a href="video.html">Trailers</a></li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ><?php echo $name?> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <ul><li><a href="user.php" >Profile</a></li>
+                              <li><a href="signinup.html" style="color: lightblue;">Logout</a></li>
+                            </ul>
+                           
+                          </li>
+                  
+                        
+                   </ul>
+                  
+
         </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-  
+    
 
 
 
@@ -60,11 +95,13 @@
   <div class="col-md-5"><a href="movies.php"><button type="button" class="btn" style="width: 150px;height: 150px;margin-top: 200px; " >Movies!</button></a></div>
                         <div class="col-sm-1 middle-border"></div>
                         <div class="col-sm-1"></div>
-  <div class="col-md-5"><a href="theatres.php"><button type="button" class="btn" style="width: 150px;height: 150px ;margin-top: 200px;">Theatres!</button></a></div>
-
+                        <div class="col-md-5" style="margin-top: 200px;"><img src="img/reel.gif">
+</div>
+ <!-- <div class="col-md-5"><a href="theatres.php"><button type="button" class="btn" style="width: 150px;height: 150px ;margin-top: 200px;">Theatres!</button></a></div>
+-->
         <?php
 
-        session_start();
+       
 
         $_SESSION["movie_input"] = 0;
         $_SESSION["theatre_input"] = 0;
@@ -75,9 +112,6 @@
       
   </div><!--container end-->
 <br>
-  <div class="container" align="center">
-<img src="img/reel.gif">
-</div>
 
 
 <!--div class="container-fluid">
@@ -109,7 +143,7 @@
 
          <div class="col-md-3" style="font-family:'Cantarell',cursive;"><h4 style="font-size: 19px;color:#968afc; font-family: 'Courgette',cursive;">Contact Us</h4><a data-toggle="modal" data-target="#message" style="color: #ffffff;text-decoration: underline;">Leave us a message</a></div>
 
-         <div class="col-md-2" style="font-family:'Cantarell',cursive;"><h4 style="color: #f9fe44;font-size: 19px; font-family: 'Courgette',cursive;">Credits</h4>Didimos<br>Dbit<br>ACM<br>Boostrap<br>W3schools</div>
+         <div class="col-md-2" style="font-family:'Cantarell',cursive;"><h4 style="color: #f9fe44;font-size: 19px; font-family: 'Courgette',cursive;">Project Team</h4>Nathaneal (21)<br>Glen (32)<br>Linson (36)<br>Preetham (37)<br>Amey (39)<br>Swapnil (40)</div>
 
          <div class="col-md-1"><img src="img/bird.png" height="150px"></div>
           
@@ -169,6 +203,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.backstretch.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+
 
 
 

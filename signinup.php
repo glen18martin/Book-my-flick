@@ -2,7 +2,7 @@
 
 require 'config.php';
 
-
+session_start();
 	
 if ($_POST['form']==0) {
 	
@@ -12,6 +12,8 @@ if ($_POST['form']==0) {
  $email = $_POST['email'];
  $dob = $_POST['dob'];
 
+
+$checklog = 'off';
 
  
  if($pass == $passcheck)
@@ -23,8 +25,13 @@ if ($_POST['form']==0) {
    //Put everyting in DB
    else{
    mysql_query("INSERT INTO `users` VALUES('$name','$dob','$email','$pass')") or die(mysql_error());
-    header("Location:select.php");
+    header("Location:user.php");
    //echo "Registration Successful";
+
+
+$_SESSION["login"]="$name";
+$checklog = $name;
+
 
    }
  }
@@ -38,7 +45,7 @@ if ($_POST['form']==0) {
 
 else  {
 
-session_start();
+
  $checkid = $_POST['checkid'];
  $checkpass = $_POST['checkpass'];
 
@@ -48,9 +55,17 @@ $result = mysql_query("SELECT U_name FROM users WHERE U_email = '$checkid' AND P
 
 if(mysql_num_rows($result) == 0) {
      echo "Check username or password";
+
+//changes
+
+     header("Location:signinup.html");
+
+     //changesend
+
 } else {
 //    echo "Found user Successfully";
- header("Location:select.php");
+  
+ header("Location:user.php");
 
 
 
@@ -58,15 +73,14 @@ if(mysql_num_rows($result) == 0) {
 $row = mysql_fetch_array($result);
 $name = $row['U_name'];
 $_SESSION["login"]="$name";
-
-
-
-}
+$checklog = $name;
 
 }
 
+}
 
 
+$_SESSION["checklog"]="$checklog";
 
 
 

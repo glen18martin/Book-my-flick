@@ -1,0 +1,1 @@
+update reservations set payment_status = 1 where customer_name='Admin Test' AND theatre_name='Cinemax' AND movie_name='Batman v Superman' AND movie_time='2016-04-02 22:50:00' 
